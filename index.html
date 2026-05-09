@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVOSEN // FULLSTACK / GD LÓGICA</title>
+    
+    <!-- [STYLESHEETS] Carga de estilos externos -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+
+    <!-- [LIBS-CSS] Librerías de UI/Animación -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@6/dist/tippy.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@6/animations/shift-away.css">
+</head>
+<body>
+    <div id="particles-js" aria-hidden="true"></div>
+    <div id="mouse-follower" aria-hidden="true"></div>
+    <!-- [HEADER] Sección de branding -->
+    <div class="container">
+        <header class="profile-hub">
+            <div class="profile-main">
+                <img class="profile-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="EVOSEN avatar">
+                <div class="profile-meta">
+                    <h1 class="title">EVOSEN // FULLSTACK / GD LÓGICA</h1>
+                    <p class="subtitle">Estudiante de Ingeniería en Sistemas • Autodidacta orientado a proyectos</p>
+                    <p class="byline"><span id="byline-text">made by evosen. ;)</span><span class="byline-cursor"></span></p>
+                    <div class="profile-badges">
+                        <span class="status-dot"></span>
+                        <span>Prometedor, en crecimiento constante</span>
+                    </div>
+                    <div id="lib-runtime-badge" class="lib-runtime-badge">runtime: cargando librerías...</div>
+                </div>
+            </div>
+            <div class="quick-links">
+                <a class="quick-link" href="#proyectos">Ver Proyectos</a>
+                <a class="quick-link" href="https://discord.gg/b2V7vu9vN5" target="_blank">Unirse a GD Uruguay</a>
+                <a class="quick-link" href="#skills">Ver Stack</a>
+            </div>
+            <div class="stack-chips">
+                <span>JavaScript</span>
+                <span>TypeScript</span>
+                <span>Node.js</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>SQL</span>
+                <span>Discord Bots</span>
+                <span>Moderación</span>
+            </div>
+        </header>
+
+        <!-- [NAVIGATION] Terminal menu -->
+        <nav>
+            <a href="#bio">bio</a>
+            <a href="#skills">habilidades</a>
+            <a href="#proyectos">proyectos</a>
+            <a href="#experiencia">experiencia</a>
+            <a href="#discord">comunidad</a>
+        </nav>
+
+        <!-- [BIO SECTION] -->
+        <section id="bio">
+            <h2 class="section-title">Bio System.Log</h2>
+            <div class="bio-window">
+                <div class="bio-window-header">
+                    <span>[SISTEM_INIT]</span> loading profile_data...
+                </div>
+                <div class="bio-content" data-field="bio-text">
+                    <p>Estudiante de Ingeniería en Sistemas con pasión por la lógica formal y el desarrollo práctico. Mi aproximación es autodidacta: aprendo proyectando, construyo solucionando problemas reales.</p>
+                    <p>Trabajo principalmente con JavaScript/TypeScript y Node.js para crear herramientas funcionales. Diseñador de niveles de Geometry Dash con enfoque en mecánicas complejas y lógica de triggers. Combino matemática discreta con desarrollo fullstack para crear soluciones creativas.</p>
+                    <p>Soy honesto sobre mis capacidades: sé bastante, soy capaz, pero aún hay mucho por aprender. No busco vender humo, sino demostrar a través de proyectos concretos.</p>
+                </div>
+                <div class="bio-signature">
+                    $ system_ready<span class="cursor"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- [SKILLS SECTION CON DROPDOWN] -->
+        <section id="skills">
+            <h2 class="section-title">Habilidades & Experiencia</h2>
+            
+            <!-- DROPDOWN: Lenguajes Principales -->
+            <button class="dropdown-toggle active">
+                <span>🔵 Lenguajes Principales</span>
+                <span class="arrow">▼</span>
+            </button>
+            <div class="dropdown-content active">
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-name">JavaScript / TypeScript</div>
+                        <div class="skill-stars" data-skill="js">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <div class="skill-level">4/5 • Lenguaje principal</div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-name">Node.js</div>
+                        <div class="skill-stars" data-skill="nodejs">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <div class="skill-level">4/5 • Backend & Bots</div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-name">HTML / CSS</div>
+                        <div class="skill-stars" data-skill="html-css">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                        </div>
+                        <div class="skill-level">5/5 • Sólido & Creativo</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DROPDOWN: Lenguajes Secundarios -->
+            <button class="dropdown-toggle active">
+                <span>🟠 Lenguajes Secundarios</span>
+                <span class="arrow">▼</span>
+            </button>
+            <div class="dropdown-content active">
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-name">PHP</div>
+                        <div class="skill-stars" data-skill="php">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <div class="skill-level">4/5 • APIs y paneles en PHP</div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-name">Vue.js</div>
+                        <div class="skill-stars" data-skill="vuejs">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <div class="skill-level">3/5 • Componentes y SPA</div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-name">Tailwind CSS</div>
+                        <div class="skill-stars" data-skill="tailwind">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <div class="skill-level">4/5 • UI rápida y responsive</div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-name">MySQL / SQL</div>
+                        <div class="skill-stars" data-skill="sql">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <div class="skill-level">3/5 • Consultas & Diseño</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DROPDOWN: Especialidades -->
+            <button class="dropdown-toggle active">
+                <span>⚡ Especialidades</span>
+                <span class="arrow">▼</span>
+            </button>
+            <div class="dropdown-content active">
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-name">Bots Discord</div>
+                        <div class="skill-stars" data-skill="discord">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <div class="skill-level">4/5 • Discord.js</div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-name">Desarrollo Web</div>
+                        <div class="skill-stars" data-skill="web">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <div class="skill-level">4/5 • Frontend & Full</div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-name">Moderación & Admin</div>
+                        <div class="skill-stars" data-skill="moderation">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                        </div>
+                        <div class="skill-level">5/5 • Servidores Grandes</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [PROJECTS SECTION] -->
+        <section id="proyectos">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-title">YTM-RPC</div>
+                    <div class="project-role">Bridge YouTube Music → Discord</div>
+                    <div class="project-description editable" data-field="project-ytm">
+                        Bridge que conecta YouTube Music con Discord Rich Presence. Muestra la canción actual en tu perfil de Discord en tiempo real. Diseño formal de sistemas.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Discord.js</span>
+                        <span class="tech-tag">APIs</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">UruBot</div>
+                    <div class="project-role">Bot de Moderación & Comunidad GD Uruguay</div>
+                    <div class="project-description editable" data-field="project-urubot">
+                        Bot Discord completo para gestionar la comunidad GD Uruguay. Funciones de moderación, gamificación, y manejo de roles para +100 usuarios activos.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Discord.js</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Bot Admin</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Web Projects</div>
+                    <div class="project-role">Sitios & Aplicaciones Web</div>
+                    <div class="project-description editable" data-field="project-web">
+                        Diversos proyectos web con HTML5, CSS3 avanzado y JavaScript vanilla. Desde landing pages hasta aplicaciones interactivas con diseño responsivo.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Server Management</div>
+                    <div class="project-role">Gestión de Comunidades</div>
+                    <div class="project-description editable" data-field="project-server">
+                        Experiencia moderando servidores grandes de Discord. Implementación de estructuras de roles, canales y sistemas de gamificación para comunidades en crecimiento.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Discord Admin</span>
+                        <span class="tech-tag">Moderación</span>
+                        <span class="tech-tag">Community</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [EXPERIENCE SECTION] -->
+        <section id="experiencia">
+            <h2 class="section-title">Experiencia & Capacidades</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-title">✓ Bots Discord</div>
+                    <div class="project-description">
+                        Experiencia completa creando bots con Discord.js. Desde comandos simples hasta sistemas avanzados de moderación, roles automáticos y gamificación.
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">✓ Páginas Web</div>
+                    <div class="project-description">
+                        Desarrollo de sitios web responsivos con HTML5, CSS3 (con variables y grid) y JavaScript vanilla. Diseño moderno y optimización.
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">✓ Moderación Servidores</div>
+                    <div class="project-description">
+                        Gestión de servidores Discord grandes con +100 usuarios. Implementación de estructuras, automoderación y comunidad activa.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [DISCORD SECTION] -->
+        <section id="discord">
+            <div class="discord-section">
+                <div class="discord-header">
+                    <span class="discord-icon">💜</span>
+                    <h2 class="discord-title">GD Uruguay Community</h2>
+                </div>
+
+                <div class="discord-content">
+                    <div class="discord-info">
+                        <p>Bienvenido a <strong>GD Uruguay</strong>, una comunidad dedicada a Geometry Dash con enfoque en level design, competición y camaradería.</p>
+                        <p>Somos una comunidad en crecimiento con moderación activa, eventos regulares y un bot personalizado (<strong>UruBot</strong>) para una mejor experiencia.</p>
+                        <p>Contamos con +100 miembros activos y estamos siempre buscando nuevos creadores y jugadores.</p>
+                    </div>
+
+                    <div class="discord-stats">
+                        <div class="stat-item">
+                            <div class="stat-label">👥 Miembros Activos</div>
+                            <div class="stat-value" id="active-members-count">Cargando...</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">📈 Estado Comunidad</div>
+                            <div class="stat-value">↑ En Crecimiento</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">🤖 Bot Oficial</div>
+                            <div class="stat-value">UruBot</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">🎮 Enfoque</div>
+                            <div class="stat-value">GD & Lógica</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="discord-preview" id="discord-preview">
+                    <div class="preview-head">Vista previa del servidor (API)</div>
+                    <div class="preview-grid">
+                        <div class="preview-item">
+                            <span class="preview-label">Servidor</span>
+                            <strong id="preview-server">Cargando...</strong>
+                        </div>
+                        <div class="preview-item">
+                            <span class="preview-label">Online</span>
+                            <strong id="preview-online">Cargando...</strong>
+                        </div>
+                        <div class="preview-item">
+                            <span class="preview-label">Miembros totales</span>
+                            <strong id="preview-members">Cargando...</strong>
+                        </div>
+                    </div>
+                    <small id="preview-note">Consultando API en tiempo real...</small>
+                </div>
+
+                <div class="discord-buttons">
+                    <a href="https://discord.gg/b2V7vu9vN5" target="_blank" class="discord-btn primary" id="discord-join">
+                        <span>→</span>
+                        <span>Unirse al Servidor</span>
+                    </a>
+                    <button class="discord-btn" id="discord-copy">
+                        <span>📋</span>
+                        <span>Copiar Invitación</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 EVOSEN • Estudiante, Desarrollador, Constructor de Mapas • Honesto & Prometedor</p>
+        </footer>
+    </div>
+
+    <!-- [MUSIC WIDGET] Widget flotante de música -->
+    <div class="music-widget">
+        <div class="music-header">▶ now playing</div>
+        <div class="music-title" id="track-name">Loading Track...</div>
+        <div class="music-artist" id="track-artist">Cargando playlist local...</div>
+        <div class="music-controls">
+            <button id="track-prev" class="control-btn" aria-label="Anterior">⏮</button>
+            <button id="track-play" class="control-btn control-btn-main" aria-label="Play/Pause">▶</button>
+            <button id="track-next" class="control-btn" aria-label="Siguiente">⏭</button>
+            <button id="track-repeat" class="control-btn" aria-label="Repetir canción">↻</button>
+        </div>
+        <div class="music-volume-row">
+            <button id="volume-toggle" class="volume-toggle" aria-label="Activar o desactivar volumen">🔇</button>
+            <input id="volume-control" class="volume-slider" type="range" min="0" max="100" step="1" value="0" aria-label="Control de volumen">
+            <span id="volume-value" class="volume-value">0%</span>
+        </div>
+        <div id="volume-state" class="volume-state">Volumen desactivado por defecto</div>
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <div class="music-time">
+            <span id="current-time">0:00</span>
+            <span id="total-time">--:--</span>
+        </div>
+        <audio id="bg-audio" preload="auto" crossorigin="anonymous"></audio>
+    </div>
+
+    <!-- [LIBS-JS] Stack extendido (20+) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/react@18/umd/react.production.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/axios@1/dist/axios.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/lodash@4/lodash.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/howler@2.2.4/dist/howler.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/tippy.js@6/dist/tippy-bundle.umd.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- [SCRIPTS] Script principal externo -->
+    <script src="js/script.js"></script>
+</body>
+</html>
